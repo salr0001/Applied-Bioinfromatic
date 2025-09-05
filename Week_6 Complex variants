@@ -1,0 +1,5 @@
+## The index command
+bcftools index input.vcf.gz
+## The input has to be either bgzipped or a bcf
+The resulting index, unlike a reference genome index, will be a binary file
+and not human-readable 
