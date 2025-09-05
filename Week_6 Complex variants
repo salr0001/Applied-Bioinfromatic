@@ -1,5 +1,11 @@
 ## The index command
 bcftools index input.vcf.gz
-## The input has to be either bgzipped or a bcf
-The resulting index, unlike a reference genome index, will be a binary file
-and not human-readable 
+
+## The input has to be either bgzipped or a bcf. The resulting index, unlike a reference genome index, will be a binary file and not human-readable 
+# Region coding
+An entire chromosome:
+bcftools view -r chr1 input.vcf.gz
+Just a single position:
+bcftools view -r chr2:1643 input.vcf.gz
+A range of positions on a single chromosome: (most common)
+bcftools view -r chr3:1-1000 input.vcf.gz
